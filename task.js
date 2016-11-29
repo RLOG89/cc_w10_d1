@@ -192,13 +192,18 @@ for (account of accounts) {
 //Assign a variable myPerson to a hash, giving them a name, height, favourite food and an eat method
 
 var eat = function(food) {
-  stomach = new Array;
-  stomatch.push(food);
+  this.stomach.push(food);
+  return this.stomach
 }
 
 var myPerson = {
   name: "Ross",
   height: "5ft 12",
   favouriteFood: "Fillet Steak",
-  eat: eat("Vindaloo")
+  stomach: [],
+  eat: eat
 }
+
+console.log(myPerson.eat("Vindaloo"))
+console.log(myPerson.eat("Fish and Chips"))
+console.log(myPerson)
